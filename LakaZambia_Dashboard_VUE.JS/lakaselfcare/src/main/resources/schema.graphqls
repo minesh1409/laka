@@ -1,0 +1,85 @@
+type User {
+  user_id:Int!
+  fname:String!
+  lname:String!
+  address: String!
+  password: String!
+  occupation:String!
+  about:String!
+  avatar:String!
+  website_url:String!
+  social:String!
+  role:String!
+  enabled:Int!
+  mobile: Long!
+  email:String!
+  username:String!
+  status:String!
+  created_at:String!
+  updated_at:String
+  
+}
+
+
+type Category {
+   category_id:Int!
+   name:String!
+   short_name:String!
+   slug:String!
+   icon:String!
+   description:String!
+   sort_order:Int!
+   status:String!
+   created_at:String!
+   updated_at:String!
+   
+  
+}
+
+type Advertisement
+{
+	advertisement_id:Int!
+	title:String!
+	slug:String!
+	description:String!
+	price:Int!
+	negotiable:String!
+	hide_phone:String!
+	hide_email:String!
+	remaining_auto_renewal:Int!
+	promo_expire_at:String!
+	listing_expire_at:String!
+	img_path:String!
+	featured_id:Int!
+	status:String!
+	created_at:String!
+	updated_at:String!
+		
+}
+
+type Query {
+  allUsers: [User]
+  AllCategory: [Category]
+  AllAds: [Advertisement]
+  User(user_id:Int!):[User]
+ 
+}
+
+
+
+
+schema {
+  query: Query
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
